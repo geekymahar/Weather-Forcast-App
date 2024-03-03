@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="weather">
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button id="fetchWeather">Get Weather</button>
+        <button id="fetchLocalWeather">Use My Location</button>
+        <div id="weatherResult" style="display: none;">
+            <h3 id="cityName"></h3>
+            <p id="description"></p>
+            <p id="temperature"></p>
+            <p id="humidity"></p>
+            <p id="wind"></p>
+            <p id="rain"></p>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
