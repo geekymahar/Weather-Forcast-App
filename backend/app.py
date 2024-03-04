@@ -40,7 +40,7 @@ def get_secret():
 @app.route('/weather', methods=['GET'])
 def get_weather():
     # Get the API key from AWS Secrets Manager
-    api_key = get_api_key()
+    api_key = get_secret()
 
     if not api_key:
         return jsonify({"error": "Failed to retrieve API key"}), 500
