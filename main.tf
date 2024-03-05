@@ -1,10 +1,10 @@
 resource "aws_elastic_beanstalk_application" "weather-app" {
-  name        = "my-weather-app"
-  description = "beanstack weather app description"
+  name        = var.application_name
+  description = var.application_environment
 }
 
 resource "aws_elastic_beanstalk_environment" "weather-app-prod" {
-  name                = "my-weather-app-prod"
+  name                = "${var.application_name}-${var.application_environment}"
   application         = aws_elastic_beanstalk_application.weather-app.name
   solution_stack_name = "64bit Amazon Linux 2 v3.5.12 running Python 3.8"
   cname_prefix        = var.app_name
