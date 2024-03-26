@@ -4,7 +4,7 @@ from flask_cors import CORS
 
 import boto3
 from botocore.exceptions import ClientError
-
+import requests
 
 
 # Create a Flask app instance
